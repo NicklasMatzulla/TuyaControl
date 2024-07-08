@@ -6,7 +6,7 @@
 		{
 			"Name": "Lamp",
 			"UUID": "de.nicklasmatzulla.tuyacontrol.lamp",
-			"Icon": "imgs/actions/lamp/icon",
+			"Icon": "imgs/icon",
 			"Tooltip": "Manage your smart lamp.",
 			"Controllers": [
 				"Encoder"
@@ -21,7 +21,7 @@
 			},
 			"States": [
 				{
-					"Image": "imgs/actions/lamp/icon"
+					"Image": "imgs/icon"
 				},
 				{
 					"TitleAlignment": "middle"
@@ -30,10 +30,10 @@
 		}
 	],
 	"Category": "TuyaControl",
-	"CategoryIcon": "imgs/plugin/category-icon",
+	"CategoryIcon": "imgs/icon",
 	"CodePath": "bin/plugin.js",
 	"Description": "A Stream Deck plugin to control your Tuya lamp.",
-	"Icon": "imgs/plugin/marketplace",
+	"Icon": "imgs/icon",
 	"SDKVersion": 2,
 	"Software": {
 		"MinimumVersion": "6.5"
