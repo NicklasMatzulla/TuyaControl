@@ -38,11 +38,13 @@ export class Lamp extends SingletonAction {
 	}
 
 	async onDialRotate(ev: DialRotateEvent<object>) {
-		let brightness;
+		if (!isTurnedOn())
+			toggle()
+		const times = Math.abs(ev.payload.ticks)
 		if (ev.payload.ticks > 0) {
-			brightness = increaseBrightness() / 10
+			increaseBrightness(times)
 		} else {
-			brightness = decreaseBrightness() / 10
+			decreaseBrightness(times)
 		}
 	}
 }

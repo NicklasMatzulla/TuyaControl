@@ -162,18 +162,18 @@ function getBrightness() {
     return currentBrightness
 }
 
-function increaseBrightness() {
-    const brightness = Math.min(Math.max(currentBrightness + 10, 10), 1000);
+function increaseBrightness(times) {
+    currentBrightness = Math.min(Math.max(currentBrightness + 10*times, 10), 1000);
     commandQueue = commandQueue.filter(command => command.command !== setBrightness);
-    enqueueCommand(setBrightness, brightness);
-    return brightness
+    enqueueCommand(setBrightness, currentBrightness);
+    return currentBrightness
 }
 
-function decreaseBrightness() {
-    const brightness = Math.min(Math.max(currentBrightness - 10, 10), 1000);
+function decreaseBrightness(times) {
+    currentBrightness = Math.min(Math.max(currentBrightness - 10*times, 10), 1000);
     commandQueue = commandQueue.filter(command => command.command !== setBrightness);
-    enqueueCommand(setBrightness, brightness);
-    return brightness
+    enqueueCommand(setBrightness, currentBrightness);
+    return currentBrightness
 }
 
 // Export the functions
