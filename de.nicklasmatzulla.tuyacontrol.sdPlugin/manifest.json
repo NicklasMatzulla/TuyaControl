@@ -1,0 +1,56 @@
+{
+	"Name": "TuyaControl",
+	"Version": "1.0.0",
+	"Author": "Nicklas Matzulla",
+	"Actions": [
+		{
+			"Name": "Lamp",
+			"UUID": "de.nicklasmatzulla.tuyacontrol.lamp",
+			"Icon": "imgs/actions/lamp/icon",
+			"Tooltip": "Manage your smart lamp.",
+			"Controllers": [
+				"Encoder"
+			],
+			"Encoder": {
+				"layout": "$B1",
+				"TriggerDescription": {
+					"Rotate": "Dim the lamp",
+					"Push": "Turn on/off the lamp",
+					"Touch": "Turn on/off the lamp"
+				}
+			},
+			"States": [
+				{
+					"Image": "imgs/actions/lamp/icon"
+				},
+				{
+					"TitleAlignment": "middle"
+				}
+			]
+		}
+	],
+	"Category": "TuyaControl",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "A Stream Deck plugin to control your Tuya lamp.",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 2,
+	"Software": {
+		"MinimumVersion": "6.5"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "10.15"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"UUID": "de.nicklasmatzulla.tuyacontrol"
+}
